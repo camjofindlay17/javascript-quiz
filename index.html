@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang=en-us>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main class="wrapper">
+        <div id="container">
+            <div style="display:none" id="timer"></div>
+            <div style="display:none" id="scorebox"></div>
+            <div class="hide" id="quiztime">
+                <div id = "question">Question</div>
+                <button class="answers" id="answer1" onclick="checkAnswer('a')"></button>
+                <button class="answers" id="answer2" onclick="checkAnswer('b')"></button>
+                <button class="answers" id="answer3" onclick="checkAnswer('c')"></button>
+                <button class="answers" id="answer4" onclick="checkAnswer('d')"></button>
+            <h3 id="response"></h3>
+                <div style="display:none" id="correct">Previous Question: Correct!</div>
+                <div style="display:none" id="incorrect">Previous Question: Incorrect!</div>
+            </div>
+            <div id="prompt">
+                <h1>Welcome to Code Quiz!</h1>
+                <p>This quiz will test your knowledge of the basic coding elements. Your goal is to correctly answer the proceeding questions as quickly as possible. However, be careful! For every incorrect answer, you will lose ten seconds off your time.</p>
+                <h4>Select "Begin Game" to start.<br> Good luck!</h4>
+                <button type="button" id="start">Begin Game!</button>
+            </div>
+            <div style="display:none" id="results" class="hide">
+                <h2>GAME OVER!</h2>
+                <h3 id="scorefinal"></h3>
+                <p>ENTER INITIALS BELOW TO ADD SCORE TO LEADERBOARD</p>
+                <form>
+                    <label for="initials">Initials:</label>
+                    <input type="text" id="initials" value="" maxlength="3">
+                    <br>
+                    <br>
+                    <div class="results-btn">
+                        <button type="submit" id="submit-initials" onclick="viewHighScores(event)" disabled>Submit</button>
+                        <button onclick="location.reload()">Try Again</button>
+                    </div>
+                </form>
+            </div>
+            <div style="display:none" id="score-table" >
+                <h2>Top 10 Scores</h2>
+                <ul id="score-list"></ul>
+                <button onclick="location.reload()">Try Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script> 
+    </main>  
+</body>
+</html>
+
